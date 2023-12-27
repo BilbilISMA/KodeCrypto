@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Binance.Net" Version="9.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.0" />
+    <PackageReference Include="Ardalis.GuardClauses" Version="4.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
+    <PackageReference Include="KrakenExchange.Net" Version="4.2.0" />
+    <PackageReference Include="Hangfire.SQLite.Core" Version="1.0.2" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Integration\" />
+    <None Remove="Integration\Kraken\" />
+    <None Remove="Data\" />
+    <None Remove="Identity\" />
+    <None Remove="Data\Interceptors\" />
+    <None Remove="Integration\Binance\" />
+    <None Remove="Persistence\" />
+    <None Remove="Persistence\EntityConfigurations\" />
+    <None Remove="Repositories\" />
+    <None Remove="Integration\Configurations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Integration\" />
+    <Folder Include="Integration\Kraken\" />
+    <Folder Include="Data\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Data\Interceptors\" />
+    <Folder Include="Integration\Binance\" />
+    <Folder Include="Persistence\" />
+    <Folder Include="Persistence\EntityConfigurations\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Integration\Configurations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KodeCrupto.Application\KodeCrypto.Application.csproj" />
+  </ItemGroup>
+</Project>

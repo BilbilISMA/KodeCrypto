@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\" />
+    <None Remove="Common\Interfaces\" />
+    <None Remove="Common\Models\" />
+    <None Remove="Common\Security\" />
+    <None Remove="Common\Behaviours\" />
+    <None Remove="Common\Exceptions\" />
+    <None Remove="UseCases\" />
+    <None Remove="UseCases\Admin\Commands\" />
+    <None Remove="UseCases\Admin\DTO\" />
+    <None Remove="UseCases\Identity\" />
+    <None Remove="Generic\" />
+    <None Remove="Common\Options\" />
+    <None Remove="DTO\" />
+    <None Remove="DTO\Integration\" />
+    <None Remove="DTO\Integration\Kraken\" />
+    <None Remove="DTO\Integration\Binance\" />
+    <None Remove="DTO\Integration\Kraken\Requests\" />
+    <None Remove="DTO\Integration\Kraken\Responses\" />
+    <None Remove="DTO\Integration\Binance\Requests\" />
+    <None Remove="DTO\Integration\Binance\Responses\" />
+    <None Remove="Common\MappingProfile\" />
+    <None Remove="UseCases\APIKey\" />
+    <None Remove="UseCases\APIKey\Commands\" />
+    <None Remove="DTO\Integration\Common\" />
+    <None Remove="UseCases\Portfolio\" />
+    <None Remove="UseCases\Portfolio\Commands\" />
+    <None Remove="UseCases\Portfolio\Queries\" />
+    <None Remove="UseCases\Portfolio\DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Common\Interfaces\" />
+    <Folder Include="Common\Models\" />
+    <Folder Include="Common\Security\" />
+    <Folder Include="Common\Behaviours\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="UseCases\" />
+    <Folder Include="UseCases\Identity\Commands\" />
+    <Folder Include="UseCases\Identity\DTO\" />
+    <Folder Include="UseCases\Identity\" />
+    <Folder Include="Generic\" />
+    <Folder Include="Common\Options\" />
+    <Folder Include="DTO\" />
+    <Folder Include="DTO\Integration\" />
+    <Folder Include="DTO\Integration\Kraken\" />
+    <Folder Include="DTO\Integration\Binance\" />
+    <Folder Include="DTO\Integration\Kraken\Requests\" />
+    <Folder Include="DTO\Integration\Kraken\Responses\" />
+    <Folder Include="DTO\Integration\Binance\Requests\" />
+    <Folder Include="DTO\Integration\Binance\Responses\" />
+    <Folder Include="Common\MappingProfile\" />
+    <Folder Include="UseCases\APIKey\" />
+    <Folder Include="UseCases\APIKey\Commands\" />
+    <Folder Include="DTO\Integration\Common\" />
+    <Folder Include="UseCases\Portfolio\" />
+    <Folder Include="UseCases\Portfolio\Commands\" />
+    <Folder Include="UseCases\Portfolio\Queries\" />
+    <Folder Include="UseCases\Portfolio\DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KodeCrypto.Domain\KodeCrypto.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
+  </ItemGroup>
+</Project>

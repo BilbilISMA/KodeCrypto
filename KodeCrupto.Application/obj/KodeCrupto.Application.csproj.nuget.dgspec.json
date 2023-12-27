@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/KodeCrupto.Application.csproj": {}
+  },
+  "projects": {
+    "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/KodeCrupto.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/KodeCrupto.Application.csproj",
+        "projectName": "KodeCrupto.Application",
+        "projectPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/KodeCrupto.Application.csproj",
+        "packagesPath": "/Users/bilbilisma/.nuget/packages/",
+        "outputPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bilbilisma/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj": {
+                "projectPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
+        "projectName": "KodeCrypto.Domain",
+        "projectPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
+        "packagesPath": "/Users/bilbilisma/.nuget/packages/",
+        "outputPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bilbilisma/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

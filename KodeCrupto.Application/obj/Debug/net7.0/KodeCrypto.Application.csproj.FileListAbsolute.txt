@@ -1,0 +1,15 @@
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/bin/Debug/net7.0/KodeCrypto.Application.deps.json
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/bin/Debug/net7.0/KodeCrypto.Application.dll
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/bin/Debug/net7.0/KodeCrypto.Application.pdb
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/bin/Debug/net7.0/KodeCrypto.Domain.dll
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/bin/Debug/net7.0/KodeCrypto.Domain.pdb
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/KodeCrypto.Application.csproj.AssemblyReference.cache
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/KodeCrypto.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/KodeCrypto.Application.AssemblyInfoInputs.cache
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/KodeCrypto.Application.AssemblyInfo.cs
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/KodeCrypto.Application.csproj.CoreCompileInputs.cache
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/KodeCrypto.Application.csproj.CopyComplete
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/KodeCrypto.Application.dll
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/refint/KodeCrypto.Application.dll
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/KodeCrypto.Application.pdb
+/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/Debug/net7.0/ref/KodeCrypto.Application.dll
