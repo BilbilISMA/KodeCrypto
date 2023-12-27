@@ -1,5 +1,4 @@
 ﻿using KodeCrypto.Application.Common.Interfaces;
-using KodeCrypto.Domain.Entities.Identity;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
@@ -18,13 +17,19 @@ namespace KodeCrypto.Core.Services
         {
             get
             {
-                var jwt = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
 
+                var context = _httpContextAccessor.HttpContext;
+                if (context is null)
+                {
+                    return null;
+                }
+                var jwt = context.Request.Headers["Authorization"];
                 var claims = ExtraxtClaims(jwt);
                 return claims.Where(c => c.Type == "id")
                                         .Select(c => c.Value)
                                         .FirstOrDefault();
             }
+            set { }
         }
 
         public IEnumerable<Claim> ExtraxtClaims(string jwt)

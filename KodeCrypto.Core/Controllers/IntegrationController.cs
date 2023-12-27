@@ -45,6 +45,20 @@ namespace KodeCrypto.Core.Controllers
             }
         }
 
+        [HttpPost("binance-orders")]
+        public async Task<IActionResult> SyncBinanceOrders()
+        {
+            try
+            {
+                var balance = await _binanceService.SyncOrders();
+                return Ok(balance);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
+        }
+
         [HttpPost("kraken-balance")]
         public async Task<IActionResult> SyncKrakenBalance()
         {
@@ -65,6 +79,20 @@ namespace KodeCrypto.Core.Controllers
             try
             {
                 var balance = await _krakenService.GetTransactionHistoryAsync();
+                return Ok(balance);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
+        }
+
+        [HttpPost("kraken-orders")]
+        public async Task<IActionResult> SyncKrakenOrders()
+        {
+            try
+            {
+                var balance = await _krakenService.SyncOrders();
                 return Ok(balance);
             }
             catch (Exception ex)

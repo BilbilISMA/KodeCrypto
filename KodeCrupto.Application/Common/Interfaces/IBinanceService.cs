@@ -7,6 +7,7 @@ namespace KodeCrypto.Application.Common.Interfaces
         Task<bool> GetBalanceAsync();
         Task<bool> GetTransactionHistoryAsync();
         Task<bool> PostOrder(BinanceOrderRequest orderRequest);
+        Task<bool> SyncOrders();
     }
 }
 

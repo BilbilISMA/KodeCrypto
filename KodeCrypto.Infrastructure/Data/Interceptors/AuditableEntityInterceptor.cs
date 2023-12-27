@@ -38,13 +38,13 @@ namespace KodeCrypto.Infrastructure.Data.Interceptors
             {
                 if (entry.State == EntityState.Added)
                 {
-                    entry.Entity.CreatedBy = _user.Id;
+                    entry.Entity.CreatedBy = _user.Id ?? string.Empty;
                     entry.Entity.Created = DateTime.UtcNow;
                 }
 
                 if (entry.State == EntityState.Modified || entry.HasChangedOwnedEntities())
                 {
-                    entry.Entity.LastModifiedBy = _user.Id;
+                    entry.Entity.LastModifiedBy = _user.Id ?? string.Empty;
                     entry.Entity.LastModified = DateTime.UtcNow;
                 }
             }

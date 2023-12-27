@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Infrastructure/KodeCrypto.Infrastructure.csproj": {}
+    "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Infrastructure/KodeCrypto.Infrastructure.csproj": {}
   },
   "projects": {
-    "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj": {
+    "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj",
+        "projectUniqueName": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj",
         "projectName": "KodeCrypto.Application",
-        "projectPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj",
+        "projectPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj",
         "packagesPath": "/Users/bilbilisma/.nuget/packages/",
-        "outputPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/obj/",
+        "outputPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrupto.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bilbilisma/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj": {
-                "projectPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj"
+              "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj": {
+                "projectPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj"
               }
             }
           }
@@ -96,14 +96,14 @@
         }
       }
     },
-    "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj": {
+    "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
+        "projectUniqueName": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
         "projectName": "KodeCrypto.Domain",
-        "projectPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
+        "projectPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
         "packagesPath": "/Users/bilbilisma/.nuget/packages/",
-        "outputPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/obj/",
+        "outputPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bilbilisma/.nuget/NuGet/NuGet.Config"
@@ -160,14 +160,14 @@
         }
       }
     },
-    "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Infrastructure/KodeCrypto.Infrastructure.csproj": {
+    "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Infrastructure/KodeCrypto.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Infrastructure/KodeCrypto.Infrastructure.csproj",
+        "projectUniqueName": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Infrastructure/KodeCrypto.Infrastructure.csproj",
         "projectName": "KodeCrypto.Infrastructure",
-        "projectPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Infrastructure/KodeCrypto.Infrastructure.csproj",
+        "projectPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Infrastructure/KodeCrypto.Infrastructure.csproj",
         "packagesPath": "/Users/bilbilisma/.nuget/packages/",
-        "outputPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Infrastructure/obj/",
+        "outputPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bilbilisma/.nuget/NuGet/NuGet.Config"
@@ -183,8 +183,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj": {
-                "projectPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj"
+              "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj": {
+                "projectPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrupto.Application/KodeCrypto.Application.csproj"
               }
             }
           }
@@ -203,10 +203,6 @@
               "target": "Package",
               "version": "[4.3.0, )"
             },
-            "Binance.Net": {
-              "target": "Package",
-              "version": "[9.2.0, )"
-            },
             "Hangfire.AspNetCore": {
               "target": "Package",
               "version": "[1.8.6, )"
@@ -214,10 +210,6 @@
             "Hangfire.SQLite.Core": {
               "target": "Package",
               "version": "[1.0.2, )"
-            },
-            "KrakenExchange.Net": {
-              "target": "Package",
-              "version": "[4.2.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

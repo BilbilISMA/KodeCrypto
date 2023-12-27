@@ -1,5 +1,6 @@
 ﻿using KodeCrypto.Application.Common.Interfaces;
 using KodeCrypto.Domain.Entities;
+using KodeCrypto.Domain.Enums;
 using Microsoft.Extensions.Logging;
 
 namespace KodeCrypto.Infrastructure.Repositories
@@ -120,6 +121,20 @@ namespace KodeCrypto.Infrastructure.Repositories
             catch (Exception ex)
             {
                 _logger.LogError("An error happened during {@action} with {@request} and {@Message} : ", nameof(SaveOrder) ,order, ex);
+
+                throw;
+            }
+        }
+
+        public async Task<List<Order>> GetOrdersToSync(ProviderEnum providerId)
+        {
+            try
+            {
+                return _dbContext.Orders.Where(x => providerId == ProviderEnum.Binance ? !x.SyncedToBinance : !x.SyncedToKraken).ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("An error happened during {@action} with {@Message} : ", nameof(GetOrdersToSync), ex);
 
                 throw;
             }

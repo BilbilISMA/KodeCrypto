@@ -1,9 +1,11 @@
-﻿using KodeCrypto.Application.UseCases.APIKey.Commands;
+﻿using API.Infrastructure;
+using KodeCrypto.Application.UseCases.APIKey.Commands;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KodeCrypto.Core.Controllers
 {
     [Route("api/apikey")]
+    [Authorize("Admin")]
     [ApiController]
 
     public class APIKeyController :  BaseController

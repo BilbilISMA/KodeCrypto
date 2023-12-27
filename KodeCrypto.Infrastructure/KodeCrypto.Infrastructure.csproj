@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Binance.Net" Version="9.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.0" />
     <PackageReference Include="Ardalis.GuardClauses" Version="4.3.0" />
@@ -24,7 +23,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
-    <PackageReference Include="KrakenExchange.Net" Version="4.2.0" />
     <PackageReference Include="Hangfire.SQLite.Core" Version="1.0.2" />
     <PackageReference Include="Hangfire.AspNetCore" Version="1.8.6" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
@@ -41,6 +39,7 @@
     <None Remove="Persistence\EntityConfigurations\" />
     <None Remove="Repositories\" />
     <None Remove="Integration\Configurations\" />
+    <None Remove="Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Integration\" />
@@ -53,6 +52,7 @@
     <Folder Include="Persistence\EntityConfigurations\" />
     <Folder Include="Repositories\" />
     <Folder Include="Integration\Configurations\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KodeCrupto.Application\KodeCrypto.Application.csproj" />

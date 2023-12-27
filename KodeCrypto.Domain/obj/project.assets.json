@@ -1853,11 +1853,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
+      "projectUniqueName": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
       "projectName": "KodeCrypto.Domain",
-      "projectPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
+      "projectPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Domain/KodeCrypto.Domain.csproj",
       "packagesPath": "/Users/bilbilisma/.nuget/packages/",
-      "outputPath": "/Users/bilbilisma/Projects/KodeCrypto/KodeCrypto.Domain/obj/",
+      "outputPath": "/Users/bilbilisma/Desktop/Webhook/KodeCrypto/KodeCrypto.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bilbilisma/.nuget/NuGet/NuGet.Config"
