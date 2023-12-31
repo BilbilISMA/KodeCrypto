@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using KodeCrypto.Infrastructure.Integration.Configurations;
+using KodeCrypto.Application.DTO.Requests;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -50,10 +51,10 @@ public static class DependencyInjection
         services.AddTransient<IIdentityService, IdentityService>();
 
         services.AddHttpClient<BinanceApiClient>();
-        services.AddTransient<IBinanceService, BinanceService>();
+        services.AddTransient<ISyncService, BinanceSyncService>();
 
         services.AddHttpClient<KrakenApiClient>();
-        services.AddTransient<IKrakenService, KrakenService>();
+        services.AddTransient<ISyncService, KrakenSyncService>();
 
         services.AddTransient<ILocalDataRepository, LocalDataRepository>();
         services.AddTransient<IApiKeyRepository, ApiKeyRepository>();

@@ -1,5 +1,5 @@
 ﻿using KodeCrypto.Application.Common.Interfaces;
-using KodeCrypto.Application.Common.Security;
+using KodeCrypto.Application.Common.Attributes;
 using System.Reflection;
 using KodeCrypto.Application.Common.Exceptions;
 using MediatR;

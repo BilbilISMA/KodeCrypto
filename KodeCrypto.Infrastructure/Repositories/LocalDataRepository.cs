@@ -1,6 +1,7 @@
 ﻿using KodeCrypto.Application.Common.Interfaces;
 using KodeCrypto.Domain.Entities;
 using KodeCrypto.Domain.Enums;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace KodeCrypto.Infrastructure.Repositories
@@ -22,12 +23,11 @@ namespace KodeCrypto.Infrastructure.Repositories
         {
             try
             {
-                return _dbContext.AccountBalances.Where(x => x.UserId == _user.Id).ToList();
+                return await _dbContext.AccountBalances.Where(x => x.UserId == _user.Id).ToListAsync();
             }
             catch (Exception ex)
             {
                 _logger.LogError("An error happened during {@action} with {@userId} and {@Message} : ", nameof(GetUserAccountBalance), _user.Id, ex);
-
                 throw;
             }
         }
@@ -36,12 +36,11 @@ namespace KodeCrypto.Infrastructure.Repositories
         {
             try
             {
-                return _dbContext.TradeHistories.Where(x => x.UserId == _user.Id).ToList();
+                return await _dbContext.TradeHistories.Where(x => x.UserId == _user.Id).ToListAsync();
             }
             catch (Exception ex)
             {
                 _logger.LogError("An error happened during {@action} with {@userId} and {@Message} : ", nameof(GetUserTradeHistory), _user.Id, ex);
-
                 throw;
             }
         }
@@ -67,7 +66,6 @@ namespace KodeCrypto.Infrastructure.Repositories
 			catch (Exception ex)
 			{
                 _logger.LogError("An error happened during {@action} with {@request} and {@Message} : ", nameof(SaveAccountBalance), accountBalance, ex);
-
                 throw;
 			}			
 		}
@@ -103,7 +101,6 @@ namespace KodeCrypto.Infrastructure.Repositories
             catch (Exception ex)
             {
                 _logger.LogError("An error happened during {@action} with {@request} and {@Message} : ", nameof(SaveTradeHistories), tradeHistories, ex);
-
                 throw;
             }
         }
@@ -114,28 +111,26 @@ namespace KodeCrypto.Infrastructure.Repositories
             {
                 await _dbContext.Orders.AddAsync(order);
                 await _dbContext.SaveChangesAsync(cancellationToken);
-                _logger.LogInformation($"{nameof(SaveOrder)} with @Content", SaveOrder);
+                _logger.LogInformation($"{nameof(SaveOrder)} with @Content", order);
 
                 return true;
             }
             catch (Exception ex)
             {
                 _logger.LogError("An error happened during {@action} with {@request} and {@Message} : ", nameof(SaveOrder) ,order, ex);
-
                 throw;
             }
         }
 
-        public async Task<List<Order>> GetOrdersToSync(ProviderEnum providerId)
+        public async Task<List<Order>> GetOrdersToSync()
         {
             try
             {
-                return _dbContext.Orders.Where(x => providerId == ProviderEnum.Binance ? !x.SyncedToBinance : !x.SyncedToKraken).ToList();
+                return await _dbContext.Orders.Where(x => !x.Synced).ToListAsync();
             }
             catch (Exception ex)
             {
                 _logger.LogError("An error happened during {@action} with {@Message} : ", nameof(GetOrdersToSync), ex);
-
                 throw;
             }
         }

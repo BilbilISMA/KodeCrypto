@@ -10,7 +10,6 @@
     <None Remove="Common\" />
     <None Remove="Common\Interfaces\" />
     <None Remove="Common\Models\" />
-    <None Remove="Common\Security\" />
     <None Remove="Common\Behaviours\" />
     <None Remove="Common\Exceptions\" />
     <None Remove="UseCases\" />
@@ -30,17 +29,17 @@
     <None Remove="Common\MappingProfile\" />
     <None Remove="UseCases\APIKey\" />
     <None Remove="UseCases\APIKey\Commands\" />
-    <None Remove="DTO\Integration\Common\" />
     <None Remove="UseCases\Portfolio\" />
     <None Remove="UseCases\Portfolio\Commands\" />
     <None Remove="UseCases\Portfolio\Queries\" />
     <None Remove="UseCases\Portfolio\DTO\" />
+    <None Remove="Common\Extensions\" />
+    <None Remove="Common\Attributes\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Common\Interfaces\" />
     <Folder Include="Common\Models\" />
-    <Folder Include="Common\Security\" />
     <Folder Include="Common\Behaviours\" />
     <Folder Include="Common\Exceptions\" />
     <Folder Include="UseCases\" />
@@ -60,11 +59,12 @@
     <Folder Include="Common\MappingProfile\" />
     <Folder Include="UseCases\APIKey\" />
     <Folder Include="UseCases\APIKey\Commands\" />
-    <Folder Include="DTO\Integration\Common\" />
     <Folder Include="UseCases\Portfolio\" />
     <Folder Include="UseCases\Portfolio\Commands\" />
     <Folder Include="UseCases\Portfolio\Queries\" />
     <Folder Include="UseCases\Portfolio\DTO\" />
+    <Folder Include="Common\Extensions\" />
+    <Folder Include="Common\Attributes\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KodeCrypto.Domain\KodeCrypto.Domain.csproj" />

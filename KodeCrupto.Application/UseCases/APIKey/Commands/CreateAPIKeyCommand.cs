@@ -3,6 +3,7 @@ using KodeCrypto.Application.Generic;
 using KodeCrypto.Domain.Entities;
 using KodeCrypto.Domain.Enums;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace KodeCrypto.Application.UseCases.APIKey.Commands
 {
@@ -16,24 +17,22 @@ namespace KodeCrypto.Application.UseCases.APIKey.Commands
     public class SaveApiKeyHandler : BaseHandlerRequest<SaveApiKeyCommand, bool>
     {
         private readonly IApiKeyRepository _apiKeyRepository;
-        private readonly IUser _user;
 
-        public SaveApiKeyHandler(BaseHandlerServices services, IApiKeyRepository apiKeyRepository, IUser user) : base(services)
+        public SaveApiKeyHandler(BaseHandlerServices services, IApiKeyRepository apiKeyRepository) : base(services)
         {
             _apiKeyRepository = apiKeyRepository;
-            _user = user;
         }
 
         public override async Task<bool> Handle(SaveApiKeyCommand command, CancellationToken cancellationToken)
         {
             try
             {
-                var existingApiKey = await _apiKeyRepository.GetApiKeyPerUser("488ba4c5-cb2a-4e82-acba-8eff7fcf1621", command.ProviderId);
+                var existingApiKey = await _apiKeyRepository.GetApiKeyPerUser(_user.Id ?? string.Empty, command.ProviderId);
                 if (existingApiKey == null)
                 {
                     var apiKey = new ApiKey
                     {
-                        UserId = "488ba4c5-cb2a-4e82-acba-8eff7fcf1621",
+                        UserId = _user.Id ?? string.Empty,
                         Key = command.ApiKey,
                         Secret = command.Secret,
                         ProviderId = command.ProviderId
@@ -44,14 +43,15 @@ namespace KodeCrypto.Application.UseCases.APIKey.Commands
                 else
                 {
                     existingApiKey.Key = command.ApiKey;
-                    existingApiKey.Secret= command.Secret;
-                    _apiKeyRepository.UpdateApiKey(existingApiKey, cancellationToken);
+                    existingApiKey.Secret = command.Secret;
+
+                    await _apiKeyRepository.UpdateApiKey(existingApiKey, cancellationToken);
                 }
                 return true;
             }
             catch (Exception ex)
             {
-                // Log or handle the exception as needed
+                _logger.LogError("An error happened during {action} with {@request} and {message} : ", nameof(SaveApiKeyCommand), command, ex);
                 throw;
             }
         }

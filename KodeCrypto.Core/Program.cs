@@ -1,10 +1,9 @@
 ﻿using Hangfire;
 using KodeCrypto.Application;
-using KodeCrypto.Application.Common.Interfaces;
 using KodeCrypto.Core;
 using KodeCrypto.Domain.Entities.Identity;
 using KodeCrypto.Infrastructure.Data;
-using Microsoft.AspNetCore.Hosting;
+using KodeCrypto.Infrastructure.Jobs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.OpenApi.Models;
 
@@ -51,7 +50,7 @@ builder.Services.AddWebServices();
 builder.Services.AddJWTConfiguration(builder.Configuration);
 builder.Services.AddSession();
 builder.Services.AddAuthentication();
-
+builder.Services.AddScoped<JobExecuter>();
 var app = builder.Build();
 
 
@@ -65,14 +64,8 @@ if (app.Environment.IsDevelopment())
     app.UseHangfireDashboard();
     app.UseHangfireServer();
 
-    //Jobs for syncing with 3rd party APIs
-    RecurringJob.AddOrUpdate<IKrakenService>(x => x.GetBalanceAsync(), "*/5 * * * *");  //Every 5 mins
-    RecurringJob.AddOrUpdate<IKrakenService>(x => x.GetTransactionHistoryAsync(), "*/5 * * * *");
-    RecurringJob.AddOrUpdate<IKrakenService>(x => x.SyncOrders(), "*/5 * * * *");
-    
-    RecurringJob.AddOrUpdate<IBinanceService>(x => x.GetBalanceAsync(), "*/5 * * * *"); 
-    RecurringJob.AddOrUpdate<IBinanceService>(x => x.GetTransactionHistoryAsync(), "*/5 * * * *");
-    RecurringJob.AddOrUpdate<IBinanceService>(x => x.SyncOrders(), "*/5 * * * *");
+    //Job for syncing with 3rd party APIs   
+    RecurringJob.AddOrUpdate<JobExecuter>(x => x.RunSync(), "*/1 * * * *");
 }
 Host.CreateDefaultBuilder(args)
 .ConfigureLogging(logging =>

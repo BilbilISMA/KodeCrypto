@@ -12,8 +12,7 @@ namespace KodeCrypto.Domain.Entities
         public decimal Price { get; set; }
         public int Volume { get; set; }
         public string Reference { get; set; }
-        public bool SyncedToKraken { get; set; }
-        public bool SyncedToBinance { get; set; }
+        public bool Synced { get; set; }
 
         public User User { get; set; }
     }

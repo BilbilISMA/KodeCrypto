@@ -40,6 +40,7 @@
     <None Remove="Repositories\" />
     <None Remove="Integration\Configurations\" />
     <None Remove="Utilities\" />
+    <None Remove="Jobs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Integration\" />
@@ -53,6 +54,7 @@
     <Folder Include="Repositories\" />
     <Folder Include="Integration\Configurations\" />
     <Folder Include="Utilities\" />
+    <Folder Include="Jobs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KodeCrupto.Application\KodeCrypto.Application.csproj" />

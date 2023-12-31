@@ -11,7 +11,7 @@ namespace KodeCrypto.Core.Controllers
     [Authorize("Admin")]
     [ApiController]
     public class PortfolioController : BaseController
-    {      
+    {
         [HttpGet("account-balance")]
         [ProducesResponseType(((int)HttpStatusCode.OK), Type = typeof(IEnumerable<AccountBalanceDTO>))]
         public async Task<IActionResult> GetAccountBalance([FromQuery] GetAccountBalanceQuery query)

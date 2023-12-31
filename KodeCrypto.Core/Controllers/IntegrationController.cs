@@ -8,13 +8,11 @@ namespace KodeCrypto.Core.Controllers
     [ApiController]
     public class IntegrationController : BaseController
     {
-        private readonly IBinanceService _binanceService;
-        private readonly IKrakenService _krakenService;
+        private readonly ISyncService _syncService;
 
-        public IntegrationController(IBinanceService binanceService, IKrakenService krakenService)
+        public IntegrationController(ISyncService syncService)
         {
-            _binanceService = binanceService;
-            _krakenService = krakenService;
+            _syncService = syncService;
         }
 
         [HttpPost("binance-balance")]
@@ -22,7 +20,7 @@ namespace KodeCrypto.Core.Controllers
         {
             try
             {
-                var balance = await _binanceService.GetBalanceAsync();
+                var balance = await _syncService.SyncBalance();
                 return Ok(balance);
             }
             catch (Exception ex)
@@ -36,7 +34,7 @@ namespace KodeCrypto.Core.Controllers
         {
             try
             {
-                var balance = await _binanceService.GetTransactionHistoryAsync();
+                var balance = await _syncService.SyncTransactionHistory();
                 return Ok(balance);
             }
             catch (Exception ex)
@@ -50,7 +48,7 @@ namespace KodeCrypto.Core.Controllers
         {
             try
             {
-                var balance = await _binanceService.SyncOrders();
+                var balance = await _syncService.SyncOrders();
                 return Ok(balance);
             }
             catch (Exception ex)
@@ -64,7 +62,7 @@ namespace KodeCrypto.Core.Controllers
         {
             try
             {
-                var balance = await _krakenService.GetBalanceAsync();
+                var balance = await _syncService.SyncBalance();
                 return Ok(balance);
             }
             catch (Exception ex)
@@ -78,7 +76,7 @@ namespace KodeCrypto.Core.Controllers
         {
             try
             {
-                var balance = await _krakenService.GetTransactionHistoryAsync();
+                var balance = await _syncService.SyncTransactionHistory();
                 return Ok(balance);
             }
             catch (Exception ex)
@@ -92,7 +90,7 @@ namespace KodeCrypto.Core.Controllers
         {
             try
             {
-                var balance = await _krakenService.SyncOrders();
+                var balance = await _syncService.SyncOrders();
                 return Ok(balance);
             }
             catch (Exception ex)
