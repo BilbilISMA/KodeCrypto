@@ -217,10 +217,7 @@ namespace KodeCrypto.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("SyncedToBinance")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("SyncedToKraken")
+                    b.Property<bool>("Synced")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Type")

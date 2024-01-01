@@ -65,7 +65,7 @@ if (app.Environment.IsDevelopment())
     app.UseHangfireServer();
 
     //Job for syncing with 3rd party APIs   
-    RecurringJob.AddOrUpdate<JobExecuter>(x => x.RunSync(), "*/1 * * * *");
+    RecurringJob.AddOrUpdate<JobExecuter>(x => x.RunSync(), "0 * * * *");
 }
 Host.CreateDefaultBuilder(args)
 .ConfigureLogging(logging =>
